@@ -17,6 +17,7 @@ import { XlsxComponent } from './xlsx/xlsx.component';
 import { ZipComponent } from './zip/zip.component';
 import { DelonFormComponent } from './form/form.component';
 import { QRComponent } from './qr/qr.component';
+import { RichTextComponent } from "./richtext/rich-text.component";
 
 const routes: Routes = [
   { path: 'st', component: STDemoComponent },
@@ -52,10 +53,11 @@ const routes: Routes = [
   { path: 'xlsx', component: XlsxComponent },
   { path: 'zip', component: ZipComponent },
   { path: 'form', component: DelonFormComponent },
+  { path: 'richtext', component: RichTextComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class DelonRoutingModule {}
+export class DelonRoutingModule { }

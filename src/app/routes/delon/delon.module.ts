@@ -19,6 +19,7 @@ import { XlsxComponent } from './xlsx/xlsx.component';
 import { ZipComponent } from './zip/zip.component';
 import { DelonFormComponent } from './form/form.component';
 import { QRComponent } from './qr/qr.component';
+import { RichTextComponent } from "./richtext/rich-text.component";
 
 const COMPONENTS = [
   STDemoComponent,
@@ -35,6 +36,7 @@ const COMPONENTS = [
   ZipComponent,
   DelonFormComponent,
   QRComponent,
+  RichTextComponent
 ];
 
 const COMPONENTS_NOROUNT = [];
@@ -45,4 +47,4 @@ const COMPONENTS_NOROUNT = [];
   declarations: [...COMPONENTS, ...COMPONENTS_NOROUNT],
   entryComponents: COMPONENTS_NOROUNT,
 })
-export class DelonModule {}
+export class DelonModule { }

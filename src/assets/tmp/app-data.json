@@ -148,6 +148,12 @@
               "text": "Zip",
               "link": "/delon/zip",
               "i18n": "menu.delon.zip"
+            },
+            {
+              "text": "Rich Text",
+              "link": "/delon/richtext",
+              "i18n": "menu.delon.richtext",
+              "shortcut": true
             }
           ]
         }
