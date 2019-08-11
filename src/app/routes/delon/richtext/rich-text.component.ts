@@ -1,6 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NzMessageService } from 'ng-zorro-antd';
+import { UEditorComponent } from 'ngx-ueditor';
 
 @Component({
   selector: 'app-rich-text',
@@ -9,6 +10,12 @@ import { NzMessageService } from 'ng-zorro-antd';
 export class RichTextComponent implements OnInit {
   form: FormGroup;
   submitting = false;
+
+  @ViewChild('full', { static: false }) full: UEditorComponent;
+  full_source: string;
+  config: any = {
+
+  };
 
   constructor(private fb: FormBuilder, private msg: NzMessageService) { }
 
@@ -23,6 +30,7 @@ export class RichTextComponent implements OnInit {
       weight: [null, []],
       public: [1, [Validators.min(1), Validators.max(3)]],
       publicUsers: [null, []],
+      richText: [null, []]
     });
   }
 

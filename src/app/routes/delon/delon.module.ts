@@ -20,6 +20,7 @@ import { ZipComponent } from './zip/zip.component';
 import { DelonFormComponent } from './form/form.component';
 import { QRComponent } from './qr/qr.component';
 import { RichTextComponent } from "./richtext/rich-text.component";
+import { UEditorModule } from 'ngx-ueditor';
 
 const COMPONENTS = [
   STDemoComponent,
@@ -42,7 +43,20 @@ const COMPONENTS = [
 const COMPONENTS_NOROUNT = [];
 
 @NgModule({
-  imports: [CommonModule, SharedModule, DelonRoutingModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    DelonRoutingModule,
+    UEditorModule.forRoot({
+      js: [
+        '../../../assets/ueditor/ueditor.config.js',
+        '../../../assets/ueditor/ueditor.all.js'
+      ],
+      options: {
+        UEDITOR_HOME_URL: '../../../assets/ueditor/'
+      }
+    })
+  ],
   providers: [CanLeaveProvide],
   declarations: [...COMPONENTS, ...COMPONENTS_NOROUNT],
   entryComponents: COMPONENTS_NOROUNT,
